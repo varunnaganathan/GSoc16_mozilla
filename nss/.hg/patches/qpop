@@ -1,0 +1,93 @@
+# HG changeset patch
+# Parent 0e34855c9f56055e4ac578aef57124be0ba3df60
+# User Varun Naganathan <varunnaganathan912@gmail.com>
+diff --git a/lib/pki/pkibase.c b/lib/pki/pkibase.c
+--- a/lib/pki/pkibase.c
++++ b/lib/pki/pkibase.c
+@@ -10,32 +10,45 @@
+ #include "pkim.h"
+ #endif /* PKIM_H */
+ 
+ #include "pki3hack.h"
+ #include "plhash.h"
+ 
+ extern const NSSError NSS_ERROR_NOT_FOUND;
+ 
++#define MAX_ITEMS_FOR_UID 2
+ typedef struct collectionTraverse
+ {
+   nssPKIObjectCollection *collection;
+   nssPKIObjectCallback *callback;
+ }collectionTraverse;
+ 
++PR_IMPLEMENT(int)
++PL_CompareKeys(const void *v1, const void *v2)
++{
++    return (*(int *)v1 < *(int *)v2) ? -1 : (*(int *)v1 > *(int *)v2);
++}
++
+ typedef struct instance_key
+ {
+   CK_OBJECT_HANDLE handle;
+   NSSToken *token;
+ }instance_key;
+ 
+ PR_IMPLEMENT(PLHashNumber)
+ hash_func1(NSSItem *uid)
+ {
+-  return (PLHashNumber)(unsigned long)(NSSItem *)uid; 
++  PRUint32 hashvalue=uid[0].size;
++  int i;
++  for (i=0;i<MAX_ITEMS_FOR_UID;i++)
++  {
++    hashvalue =  hashvalue ^ uid[i].size;
++  }
++  return (PLHashNumber)(unsigned long)hashvalue; 
+ }
+ 
+ PR_IMPLEMENT(PLHashNumber)
+ hash_func2(instance_key *key)
+ {
+   return (PLHashNumber)( (PLHashNumber)((unsigned long)key->token) ^ (PLHashNumber)((unsigned long)key->handle) );
+ }
+ 
+@@ -604,17 +617,17 @@ typedef enum
+ /* Each object is defined by a set of items that uniquely identify it.
+  * Here are the uid sets:
+  *
+  * NSSCertificate ==>  { issuer, serial }
+  * NSSPrivateKey
+  *         (RSA) ==> { modulus, public exponent }
+  *
+  */
+-#define MAX_ITEMS_FOR_UID 2
++
+ 
+ /* pkiObjectCollectionNode
+  *
+  * A node in the collection is the set of unique identifiers for a single
+  * object, along with either the actual object or a proto-object.
+  */
+ typedef struct
+ {
+@@ -662,18 +675,18 @@ nssPKIObjectCollection_Create (
+     if (!arena) {
+ 	return (nssPKIObjectCollection *)NULL;
+     }
+     rvCollection = nss_ZNEW(arena, nssPKIObjectCollection);
+     if (!rvCollection) {
+ 	goto loser;
+     }
+     PR_INIT_CLIST(&rvCollection->head);
+-    rvCollection->htable = PL_NewHashTable(1<<31,hash_func1,PL_CompareStrings,PL_CompareValues,NULL,NULL);
+-    rvCollection->htable2 = PL_NewHashTable(1<<31,hash_func2,PL_CompareStrings,PL_CompareValues,NULL,NULL);
++    rvCollection->htable = PL_NewHashTable(1<<31,hash_func1,PL_CompareKeys,PL_CompareValues,NULL,NULL);
++    rvCollection->htable2 = PL_NewHashTable(1<<31,hash_func2,PL_CompareKeys,PL_CompareValues,NULL,NULL);
+     rvCollection->arena = arena;
+     rvCollection->td = td; /* XXX */
+     rvCollection->cc = ccOpt;
+     rvCollection->lockType = lockType;
+     return rvCollection;
+ loser:
+     nssArena_Destroy(arena);
+     return (nssPKIObjectCollection *)NULL;

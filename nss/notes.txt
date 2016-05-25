@@ -1,0 +1,43 @@
+every pkiObjectcollectionNode has a cryptokibject
+typedef struct nssCryptokiInstanceStr nssCryptokiObject;
+
+struct nssCryptokiInstanceStr {
+    CK_OBJECT_HANDLE handle;
+    NSSToken *token;
+    PRBool isTokenObject;
+    NSSUTF8 *label;
+};
+
+struct nssPKIObjectCollectionStr
+{
+  NSSArena *arena;
+  NSSTrustDomain *td;
+  NSSCryptoContext *cc;
+  PRCList head; /* list of pkiObjectCollectionNode's */
+  PRUint32 size;
+  pkiObjectType objectType;
+  void           (*      destroyObject)(nssPKIObject *o);
+  PRStatus       (*   getUIDFromObject)(nssPKIObject *o, NSSItem *uid);
+  PRStatus       (* getUIDFromInstance)(nssCryptokiObject *co, NSSItem *uid, 
+                                        NSSArena *arena);
+  nssPKIObject * (*       createObject)(nssPKIObject *o);
+  nssPKILockType lockType; /* type of lock to use for new proto-objects */
+};
+
+struct NSSToken {
+    struct nssDeviceBaseStr base;
+    NSSSlot *slot;    /* Parent (or peer, if you will) */
+    CK_FLAGS ckFlags; /* from CK_TOKEN_INFO.flags */
+    PRUint32 flags;
+    void *epv;
+    nssSession *defaultSession;
+    NSSTrustDomain *trustDomain;
+    PRIntervalTime lastTime;
+    nssTokenObjectCache *cache;
+    PK11SlotInfo *pk11slot;
+};
+
+check what nssPKIObjectCollection_GetObjects and nssPKIObjectCollection_Traverse do
+
+done till 757 pkibase.c
+go till 989

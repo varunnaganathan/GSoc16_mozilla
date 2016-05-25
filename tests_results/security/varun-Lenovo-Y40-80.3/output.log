@@ -1,0 +1,7 @@
+********************************************
+   Platform: Linux3.19_x86_cc_glibc_PTH_DBG.OBJ
+   Results: varun-Lenovo-Y40-80.3
+********************************************
+
+init.sh init: Testing PATH .:/home/varun/mozilla-nss/dist/Linux3.19_x86_cc_glibc_PTH_DBG.OBJ/bin:/home/varun/mozilla-nss/dist/Linux3.19_x86_cc_glibc_PTH_DBG.OBJ/lib:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/games:/usr/local/games against LIB /home/varun/mozilla-nss/dist/Linux3.19_x86_cc_glibc_PTH_DBG.OBJ/lib:
+Build Incomplete. Aborting test.

@@ -1,0 +1,1 @@
+Bug 1253211 - changed the storage of objects to a hash map to optimize query operations

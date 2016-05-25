@@ -1,0 +1,569 @@
+F S UID        PID  PPID  C PRI  NI ADDR SZ WCHAN  STIME TTY          TIME CMD
+4 S root         1     0  0  80   0 -  8477 poll_s Mar01 ?        00:00:01 /sbin/init
+1 S root         2     0  0  80   0 -     0 kthrea Mar01 ?        00:00:00 [kthreadd]
+1 S root         3     2  0  80   0 -     0 smpboo Mar01 ?        00:00:00 [ksoftirqd/0]
+1 S root         5     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/0:0H]
+1 R root         7     2  0  80   0 -     0 rcu_gp Mar01 ?        00:01:15 [rcu_sched]
+1 S root         8     2  0  80   0 -     0 rcu_gp Mar01 ?        00:00:00 [rcu_bh]
+1 S root         9     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:49 [rcuos/0]
+1 S root        10     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:00 [rcuob/0]
+1 S root        11     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [migration/0]
+5 S root        12     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [watchdog/0]
+5 S root        13     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [watchdog/1]
+1 S root        14     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [migration/1]
+1 S root        15     2  0  80   0 -     0 smpboo Mar01 ?        00:00:02 [ksoftirqd/1]
+1 S root        17     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/1:0H]
+1 S root        18     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:29 [rcuos/1]
+1 S root        19     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:00 [rcuob/1]
+5 S root        20     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [watchdog/2]
+1 S root        21     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [migration/2]
+1 S root        22     2  0  80   0 -     0 smpboo Mar01 ?        00:00:00 [ksoftirqd/2]
+1 S root        24     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/2:0H]
+1 S root        25     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:20 [rcuos/2]
+1 S root        26     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:00 [rcuob/2]
+5 S root        27     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [watchdog/3]
+1 S root        28     2  0 -40   - -     0 smpboo Mar01 ?        00:00:00 [migration/3]
+1 S root        29     2  0  80   0 -     0 smpboo Mar01 ?        00:00:00 [ksoftirqd/3]
+1 S root        31     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/3:0H]
+1 S root        32     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:09 [rcuos/3]
+1 S root        33     2  0  80   0 -     0 rcu_no Mar01 ?        00:00:00 [rcuob/3]
+1 S root        34     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [khelper]
+5 S root        35     2  0  80   0 -     0 devtmp Mar01 ?        00:00:00 [kdevtmpfs]
+1 S root        36     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [netns]
+1 S root        37     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [perf]
+1 S root        38     2  0  80   0 -     0 watchd Mar01 ?        00:00:00 [khungtaskd]
+1 S root        39     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [writeback]
+1 S root        40     2  0  85   5 -     0 ksm_sc Mar01 ?        00:08:07 [ksmd]
+1 S root        41     2  0  99  19 -     0 khugep Mar01 ?        00:00:13 [khugepaged]
+1 S root        42     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [crypto]
+1 S root        43     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kintegrityd]
+1 S root        44     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [bioset]
+1 S root        45     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kblockd]
+1 S root        46     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [ata_sff]
+1 S root        47     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [md]
+1 S root        48     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [devfreq_wq]
+1 S root        52     2  0  80   0 -     0 kswapd Mar01 ?        00:00:07 [kswapd0]
+1 S root        53     2  0  80   0 -     0 fsnoti Mar01 ?        00:00:00 [fsnotify_mark]
+1 S root        54     2  0  80   0 -     0 ecrypt Mar01 ?        00:00:00 [ecryptfs-kthrea]
+1 S root        66     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kthrotld]
+1 S root        67     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [acpi_thermal_pm]
+1 S root        73     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [ipv6_addrconf]
+1 S root        93     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [deferwq]
+1 S root        94     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [charger_manager]
+1 S root       145     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kpsmoused]
+1 S root       147     2  0  80   0 -     0 scsi_e Mar01 ?        00:00:00 [scsi_eh_0]
+1 S root       148     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [scsi_tmf_0]
+1 S root       149     2  0  80   0 -     0 scsi_e Mar01 ?        00:00:00 [scsi_eh_1]
+1 S root       150     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [scsi_tmf_1]
+1 S root       151     2  0  80   0 -     0 scsi_e Mar01 ?        00:00:00 [scsi_eh_2]
+1 S root       152     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [scsi_tmf_2]
+1 S root       153     2  0  80   0 -     0 scsi_e Mar01 ?        00:00:00 [scsi_eh_3]
+1 S root       154     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [scsi_tmf_3]
+1 S root       158     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [rtsx_pci_sdmmc_]
+1 S root       174     2  0  80   0 -     0 kjourn Mar01 ?        00:00:02 [jbd2/sda8-8]
+1 S root       175     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [ext4-rsv-conver]
+1 S root       303     1  0  80   0 -  4936 poll_s Mar01 ?        00:00:00 upstart-udev-bridge --daemon
+1 S root       308     2  0  60 -20 -     0 worker Mar01 ?        00:00:02 [kworker/2:1H]
+1 S root       309     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/3:1H]
+1 S root       320     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/1:1H]
+5 S root       343     1  0  80   0 - 12988 ep_pol Mar01 ?        00:00:01 /lib/systemd/systemd-udevd --daemon
+1 S root       359     2  0  80   0 -     0 kjourn Mar01 ?        00:00:05 [jbd2/sda9-8]
+1 S root       360     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [ext4-rsv-conver]
+1 S root       399     2  0   9   - -     0 irq_th Mar01 ?        00:00:00 [irq/51-mei_me]
+1 S root       422     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [cfg80211]
+1 S root       432     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kmemstick]
+1 S root       433     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/u17:0]
+1 S root       434     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [hci0]
+1 S root       435     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [hci0]
+1 S root       436     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/u17:1]
+1 S root       449     2  0   9   - -     0 irq_th Mar01 ?        00:08:58 [irq/52-iwlwifi]
+1 S root       471     2  0  60 -20 -     0 worker Mar01 ?        00:00:00 [kworker/0:1H]
+1 S root       502     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [hd-audio0]
+1 S root       506     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [hd-audio1]
+1 S root       527     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [kfd_process_wq]
+1 S root       528     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [ttm_swap]
+1 S root       609     1  0  80   0 -  3816 poll_s Mar01 ?        00:00:00 upstart-socket-bridge --daemon
+1 S root       651     1  0  80   0 -  3820 poll_s Mar01 ?        00:00:00 upstart-file-bridge --daemon
+1 S root       667     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+1 S root       668     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+1 S root       669     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+1 S root       670     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+1 S root       671     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+1 S root       672     2  0  60 -20 -     0 rescue Mar01 ?        00:00:00 [radeon-crtc]
+5 S syslog     767     1  0  80   0 - 63962 poll_s Mar01 ?        00:00:00 rsyslogd
+5 S message+   794     1  0  80   0 - 10197 ep_pol Mar01 ?        00:00:10 dbus-daemon --system --fork
+4 S root       807     1  0  80   0 - 82559 poll_s Mar01 ?        00:00:00 /usr/sbin/ModemManager
+5 S avahi      821     1  0  80   0 -  8119 poll_s Mar01 ?        00:00:13 avahi-daemon: running [varun-Lenovo-Y40-80.local]
+1 S avahi      823   821  0  80   0 -  8057 unix_s Mar01 ?        00:00:00 avahi-daemon: chroot helper
+5 S root       827     1  0  80   0 -  4825 poll_s Mar01 ?        00:00:00 /usr/sbin/bluetoothd
+4 S root       834     1  0  80   0 - 10891 ep_pol Mar01 ?        00:00:00 /lib/systemd/systemd-logind
+5 S root       838     2  0  70 -10 -     0 wait_w Mar01 ?        00:00:00 [krfcommd]
+5 S root       853     1  0  80   0 - 90453 poll_s Mar01 ?        00:00:25 NetworkManager
+4 S root       920     1  0  80   0 - 76078 poll_s Mar01 ?        00:00:18 /usr/lib/policykit-1/polkitd --no-debug
+4 S root       942     1  0  80   0 - 18840 poll_s Mar01 ?        00:00:00 /usr/sbin/cups-browsed
+5 S root       946     1  0  80   0 -  7688 poll_s Mar01 ?        00:09:27 /sbin/wpa_supplicant -B -P /run/sendsigs.omit.d/wpasupplicant.pid -u -s -O /var/run/wpa_supplicant
+4 S root      1038     1  0  80   0 -  5005 wait_w Mar01 tty4     00:00:00 /sbin/getty -8 38400 tty4
+4 S root      1042     1  0  80   0 -  5005 wait_w Mar01 tty5     00:00:00 /sbin/getty -8 38400 tty5
+4 S root      1043     1  0  80   0 - 31399 poll_s Mar01 ?        00:00:15 thermald --no-daemon --dbus-enable
+1 S root      1047     2  0  80   0 -     0 worker Mar04 ?        00:00:01 [kworker/u16:0]
+4 S root      1048     1  0  80   0 -  5005 wait_w Mar01 tty2     00:00:00 /sbin/getty -8 38400 tty2
+4 S root      1049     1  0  80   0 -  5005 wait_w Mar01 tty3     00:00:00 /sbin/getty -8 38400 tty3
+4 S root      1052     1  0  80   0 -  5005 wait_w Mar01 tty6     00:00:00 /sbin/getty -8 38400 tty6
+5 S root      1107     1  0  80   0 -  4824 hrtime Mar01 ?        00:00:15 /usr/sbin/irqbalance
+1 S root      1109     1  0  80   0 -  1093 poll_s Mar01 ?        00:00:05 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+1 S kernoops  1122     1  0  80   0 -  9288 poll_s Mar01 ?        00:00:02 /usr/sbin/kerneloops
+1 S root      1134     1  0  80   0 -  5915 hrtime Mar01 ?        00:00:00 cron
+4 S root      1186     1  0  80   0 -  5005 wait_w Mar01 tty1     00:00:00 /sbin/getty -8 38400 tty1
+1 S whoopsie  1192     1  0  80   0 - 109310 poll_s Mar01 ?       00:00:00 whoopsie
+4 S root      1206     1  0  80   0 - 73165 poll_s Mar01 ?        00:00:00 lightdm
+4 S root      1217  1206  1  80   0 - 219937 poll_s Mar01 tty7    00:46:12 /usr/bin/X -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+4 S root      1220     1  0  80   0 - 75649 poll_s Mar01 ?        00:00:04 /usr/lib/accountsservice/accounts-daemon
+1 S root      1243     2  0  80   0 -     0 kaudit Mar01 ?        00:00:00 [kauditd]
+4 S root      1289  1206  0  80   0 - 42632 wait   Mar01 ?        00:00:00 lightdm --session-child 12 19
+4 S root      1319     1  0  80   0 - 76223 poll_s Mar01 ?        00:00:00 /usr/lib/upower/upowerd
+4 S rtkit     1332     1  0  81   1 - 42230 poll_s Mar01 ?        00:00:02 /usr/lib/rtkit/rtkit-daemon
+4 S colord    1500     1  0  80   0 - 77756 poll_s Mar01 ?        00:00:00 /usr/lib/colord/colord
+4 S nobody    1542   853  0  80   0 -  8807 poll_s Mar01 ?        00:00:03 /usr/sbin/dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/run/sendsigs.omit.d/network-manager.dnsmasq.pid --listen-address=127.0.1.1 --conf-file=/var/run/NetworkManager/dnsmasq.conf --cache-size=0 --proxy-dnssec --enable-dbus=org.freedesktop.NetworkManager.dnsmasq --conf-dir=/etc/NetworkManager/dnsmasq.d
+1 S varun     1924     1  0  80   0 - 283480 poll_s Mar01 ?       00:00:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+4 S varun     1928  1289  0  80   0 - 10050 poll_s Mar01 ?        00:00:02 init --user
+1 S varun     1999  8055  0  80   0 - 214030 futex_ Mar04 ?       00:00:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.41.1589852668 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+1 S varun     2012  1928  0  80   0 - 10206 ep_pol Mar01 ?        00:00:21 dbus-daemon --fork --session --address=unix:abstract=/tmp/dbus-NN6YKR220x
+0 S varun     2024  1928  0  80   0 -  5576 poll_s Mar01 ?        00:00:00 upstart-event-bridge
+0 S varun     2030  1928  0  80   0 - 19582 poll_s Mar01 ?        00:00:01 /usr/lib/x86_64-linux-gnu/hud/window-stack-bridge
+1 S varun     2051  1928  0  80   0 -  7697 poll_s Mar01 ?        00:00:00 upstart-file-bridge --daemon --user
+1 S varun     2052  1928  0  80   0 -  5598 poll_s Mar01 ?        00:00:03 upstart-dbus-bridge --daemon --session --user --bus-name session
+1 S varun     2053  1928  0  80   0 - 98028 poll_s Mar01 ?        00:03:05 /usr/bin/ibus-daemon --daemonize --xim
+1 S varun     2055  1928  0  80   0 -  5578 poll_s Mar01 ?        00:00:00 upstart-dbus-bridge --daemon --system --user --bus-name system
+0 S varun     2076  1928  0  80   0 - 44582 poll_s Mar01 ?        00:00:00 /usr/lib/dconf/dconf-service
+0 S varun     2103  1928  0  80   0 - 141395 poll_s Mar01 ?       00:00:31 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+0 S varun     2105  1928  0  80   0 - 91920 poll_s Mar01 ?        00:00:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+0 S varun     2109  2105  0  80   0 -  9846 ep_pol Mar01 ?        00:00:01 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+0 S varun     2112  1928  0  80   0 - 31262 poll_s Mar01 ?        00:00:11 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+0 S varun     2118  1928  0  80   0 - 104654 poll_s Mar01 ?       00:00:01 /usr/lib/gvfs/gvfsd
+0 S varun     2122  1928  0  80   0 - 90108 futex_ Mar01 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+0 S varun     2133  1928  0  80   0 - 14566 poll_s Mar01 ?        00:00:00 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+0 S varun     2143  2053  0  80   0 - 73944 poll_s Mar01 ?        00:00:00 /usr/lib/ibus/ibus-dconf
+0 S varun     2144  2053  0  80   0 - 124906 poll_s Mar01 ?       00:00:38 /usr/lib/ibus/ibus-ui-gtk3
+0 S varun     2146  1928  0  80   0 - 99286 poll_s Mar01 ?        00:00:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+0 S varun     2160  2053  0  80   0 - 54980 poll_s Mar01 ?        00:00:36 /usr/lib/ibus/ibus-engine-simple
+0 S varun     2195  1928  0  80   0 - 205913 poll_s Mar01 ?       00:00:05 /usr/lib/unity-settings-daemon/unity-settings-daemon
+0 S varun     2200  1928  0  80   0 - 173143 poll_s Mar01 ?       00:00:38 /usr/lib/x86_64-linux-gnu/hud/hud-service
+0 S varun     2210  1928  0  80   0 - 148509 poll_s Mar01 ?       00:00:01 gnome-session --session=ubuntu
+0 S varun     2215  1928  0  80   0 - 154904 poll_s Mar01 ?       00:01:07 /usr/lib/unity/unity-panel-service
+0 S varun     2269  2195  0  80   0 -  5611 poll_s Mar01 ?        00:00:03 syndaemon -i 1.0 -t -K -R
+1 S varun     2273  1928  0  69 -11 - 128417 poll_s Mar01 ?       00:03:32 /usr/bin/pulseaudio --start --log-target=syslog
+0 S varun     2290  1928  0  80   0 - 152189 poll_s Mar01 ?       00:00:01 /usr/lib/x86_64-linux-gnu/indicator-keyboard-service --use-gtk
+0 S varun     2295  1928  0  80   0 - 91387 poll_s Mar01 ?        00:00:03 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+0 S varun     2296  1928  0  80   0 - 73438 poll_s Mar01 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indicator-bluetooth/indicator-bluetooth-service
+0 S varun     2298  1928  0  80   0 - 73924 poll_s Mar01 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indicator-power/indicator-power-service
+0 S varun     2303  1928  0  80   0 - 291149 poll_s Mar01 ?       00:00:03 /usr/lib/x86_64-linux-gnu/indicator-datetime/indicator-datetime-service
+0 S varun     2305  1928  0  80   0 - 142366 poll_s Mar01 ?       00:00:03 /usr/lib/x86_64-linux-gnu/indicator-sound/indicator-sound-service
+0 S varun     2309  1928  0  80   0 - 114194 poll_s Mar01 ?       00:00:00 /usr/lib/x86_64-linux-gnu/indicator-printers/indicator-printers-service
+0 S varun     2325  1928  0  80   0 - 226599 poll_s Mar01 ?       00:00:01 /usr/lib/x86_64-linux-gnu/indicator-session/indicator-session-service
+0 S varun     2326  1928  0  80   0 - 71689 poll_s Mar01 ?        00:00:00 /usr/lib/x86_64-linux-gnu/indicator-application/indicator-application-service
+0 S varun     2350  1928  0  80   0 - 276760 poll_s Mar01 ?       00:00:00 /usr/lib/evolution/evolution-source-registry
+0 S varun     2352  1928  0  80   0 - 107683 poll_s Mar01 ?       00:00:01 /usr/lib/x86_64-linux-gnu/notify-osd
+0 S varun     2372  2210  1  80   0 - 400358 poll_s Mar01 ?       00:55:10 compiz
+0 S varun     2385  1928  0  80   0 - 274056 poll_s Mar01 ?       00:00:00 /usr/lib/evolution/evolution-calendar-factory
+0 S varun     2396  2210  0  80   0 - 163463 poll_s Mar01 ?       00:00:01 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+0 S varun     2397  2210  0  80   0 - 139711 poll_s Mar01 ?       00:00:01 /usr/lib/unity-settings-daemon/unity-fallback-mount-helper
+0 S varun     2401  2210  0  80   0 - 441560 poll_s Mar01 ?       00:01:02 nautilus -n
+0 S varun     2410  1928  0  80   0 - 96332 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+4 S root      2417     1  0  80   0 - 112995 poll_s Mar01 ?       00:00:25 /usr/lib/udisks2/udisksd --no-debug
+0 S varun     2426  1928  0  80   0 - 53111 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+0 S varun     2430  1928  0  80   0 - 71492 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+0 S varun     2435  1928  0  80   0 - 54352 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+0 S varun     2446  1928  0  80   0 - 241050 poll_s Mar01 ?       00:00:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.18 /org/gtk/gvfs/exec_spaw/0
+0 S varun     2453  1928  0  80   0 - 67596 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.18 /org/gtk/gvfs/exec_spaw/1
+0 S varun     2466  1928  0  80   0 - 31130 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfsd-metadata
+0 S varun     2502  1928  6  80   0 - 626342 poll_s Mar01 ?       04:41:11 /usr/lib/firefox/firefox
+0 S varun     2532  1928  0  80   0 - 71805 poll_s Mar01 ?        00:00:00 /usr/lib/libunity-webapps/unity-webapps-service
+0 S varun     2541  2210  0  80   0 - 114475 poll_s Mar01 ?       00:00:00 telepathy-indicator
+0 S varun     2554  1928  0  80   0 - 84174 poll_s Mar01 ?        00:00:01 /usr/lib/telepathy/mission-control-5
+0 S varun     2591  2210  0  80   0 - 193612 poll_s Mar01 ?       00:00:10 zeitgeist-datahub
+0 S varun     2596  1928  0  80   0 - 90977 poll_s Mar01 ?        00:00:01 /usr/bin/zeitgeist-daemon
+1 S varun     2598  8055  0  80   0 - 195958 futex_ Mar04 ?       00:00:02 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.47.981250406 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+0 S varun     2610  1928  0  80   0 - 82841 poll_s Mar01 ?        00:00:05 /usr/lib/x86_64-linux-gnu/zeitgeist-fts
+0 S varun     2631  2610  0  80   0 -  2854 unix_s Mar01 ?        00:00:00 /bin/cat
+0 S varun     2650  2210  0  80   0 - 164669 poll_s Mar01 ?       00:00:02 update-notifier
+0 S varun     2852  2210  0  80   0 - 114784 poll_s Mar01 ?       00:00:01 /usr/lib/x86_64-linux-gnu/deja-dup/deja-dup-monitor
+4 S root      2993   853  0  80   0 -  2559 poll_s Mar01 ?        00:00:00 /sbin/dhclient -d -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /run/sendsigs.omit.d/network-manager.dhclient-eth0.pid -lf /var/lib/NetworkManager/dhclient-2b0b6a60-4e5b-46e2-86b0-926907c12dd3-eth0.lease -cf /var/lib/NetworkManager/dhclient-eth0.conf eth0
+4 S root      3255     1  0  80   0 - 23003 poll_s Mar01 ?        00:00:00 /usr/bin/python /usr/lib/system-service/system-service-d
+0 S varun     3282  1928  0  80   0 - 168118 poll_s Mar01 ?       00:01:18 gnome-terminal
+0 S varun     3289  3282  0  80   0 -  3707 unix_s Mar01 ?        00:00:00 gnome-pty-helper
+0 S varun     3290  3282  0  80   0 -  6721 wait_w Mar01 pts/1    00:00:00 bash
+1 S root      3449     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/u16:2]
+5 S root      3834  1928  0  80   0 -  6111 poll_s Mar01 ?        00:00:00 dbus-launch --autolaunch=ee6242b96c7757a4b77da61856d5fe52 --binary-syntax --close-stderr
+5 S root      3835  1928  0  80   0 -  9805 ep_pol Mar01 ?        00:00:00 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+0 S root      3840  1928  0  80   0 - 44552 poll_s Mar01 ?        00:00:00 /usr/lib/dconf/dconf-service
+0 S root      3842  1928  0  80   0 - 72477 poll_s Mar01 ?        00:00:00 /usr/bin/zeitgeist-daemon
+0 S root      3859  1928  0  80   0 - 177108 poll_s Mar01 ?       00:00:03 zeitgeist-datahub
+0 S root      3871  1928  0  80   0 - 49162 poll_s Mar01 ?        00:00:00 /usr/lib/gvfs/gvfsd
+4 S root      3876  1928  0  80   0 - 90108 futex_ Mar01 ?        00:00:00 /usr/lib/gvfs/gvfsd-fuse /root/.gvfs -f -o big_writes
+1 S varun     3880  8055  0  80   0 - 285606 futex_ Mar04 ?       00:00:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.53.1667135711 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+0 S varun     3922  1928  0  80   0 - 169825 poll_s Mar01 ?       00:00:06 /usr/lib/x86_64-linux-gnu/unity-scope-home/unity-scope-home
+0 S varun     3934  1928  0  80   0 - 167729 poll_s Mar01 ?       00:00:06 /usr/bin/unity-scope-loader applications/applications.scope applications/scopes.scope commands.scope
+0 S varun     3938  1928  0  80   0 - 316556 poll_s Mar01 ?       00:00:03 /usr/lib/x86_64-linux-gnu/unity-lens-files/unity-files-daemon
+0 S varun     3975  1928  0  80   0 - 243055 poll_s Mar01 ?       00:00:01 nm-applet
+4 S nobody    4140   853  0  80   0 -  8808 poll_s Mar01 ?        00:00:03 /usr/sbin/dnsmasq --conf-file --no-hosts --keep-in-foreground --bind-interfaces --except-interface=lo --clear-on-reload --strict-order --listen-address=10.42.0.1 --dhcp-range=10.42.0.10,10.42.0.100,60m --dhcp-option=option:router,10.42.0.1 --dhcp-lease-max=50 --pid-file=/var/run/nm-dnsmasq-wlan0.pid
+1 S varun     4203  8055  0  80   0 - 128116 futex_ Mar04 ?       00:00:11 /opt/google/chrome/chrome --type=ppapi --channel=8038.54.1225952921 --ppapi-flash-args --lang=en-US --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+0 S varun     4424  1928  0  80   0 - 62949 poll_s Mar01 ?        00:00:00 /usr/lib/geoclue/geoclue-master
+0 S varun     4428  1928  0  80   0 - 84152 poll_s Mar01 ?        00:00:00 /usr/lib/x86_64-linux-gnu/ubuntu-geoip-provider
+0 S varun     4453  1928  0  80   0 - 388751 poll_s Mar01 ?       00:00:08 /usr/lib/gvfs/gvfsd-http --spawner :1.18 /org/gtk/gvfs/exec_spaw/2
+0 S varun     4454  3282  0  80   0 -  6835 wait   Mar04 pts/27   00:00:00 bash
+0 S varun     5072  1928  0  80   0 - 186827 poll_s Mar01 ?       00:10:40 xchat
+0 S varun     5229  1928  0  80   0 - 87558 poll_s Mar01 ?        00:00:03 /usr/lib/x86_64-linux-gnu/unity-lens-music/unity-music-daemon
+1 S root      5236     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/0:2]
+1 S root      5239     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/3:0]
+0 S varun     5342  1928  0  80   0 - 34402 pipe_w Mar01 ?        00:00:00 /usr/lib/libreoffice/program/oosplash --writer
+0 S varun     5372  5342  0  80   0 - 412830 poll_s Mar01 ?       00:00:27 /usr/lib/libreoffice/program/soffice.bin --writer --splash-pipe=5
+4 S root      6792     1  0  80   0 - 19215 ep_pol Mar04 ?        00:00:00 /usr/sbin/cupsd -f
+4 S lp        6795  6792  0  80   0 - 15791 pipe_w Mar04 ?        00:00:00 /usr/lib/cups/notifier/dbus dbus:// 
+4 S varun     8038  1928  0  80   0 - 321467 poll_s Mar03 ?       00:08:41 /opt/google/chrome/chrome    
+0 S varun     8046  8038  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+0 S varun     8047  8038  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+4 S varun     8051  8038  0  80   0 - 86882 wait   Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+4 S varun     8052  8051  0  80   0 - 32764 skb_re Mar03 ?        00:00:00 /opt/google/chrome/nacl_helper
+5 S varun     8055  8051  0  80   0 - 86882 poll_s Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+0 S varun     8115  8038  0  80   0 - 207985 poll_s Mar03 ?       00:07:52 /opt/google/chrome/chrome --type=gpu-process --channel=8038.0.1522775727 --supports-dual-gpus=false --gpu-driver-bug-workarounds=2,3,19,21,52 --disable-gl-extensions=GL_ARB_occlusion_query GL_ARB_occlusion_query2 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor=Mesa --gpu-driver-version=10.5.2 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+1 S varun     8144  8055  0  80   0 - 190258 futex_ Mar03 ?       00:00:01 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/SafeBrowsingUpdateFrequency/Default/SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --extension-process --enable-webrtc-hw-h264-encoding --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.2.991246969 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+1 S varun     8145  8115  0  80   0 - 95913 skb_re Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=gpu-broker                                                                                                                                                                                                                                                                                                                                                         
+1 S varun     8208  8055  0  80   0 - 290065 futex_ Mar03 ?       00:10:46 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.3.336371169 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+4 S root      8668     1  0  80   0 - 19078 poll_s Mar01 ?        00:00:00 /usr/bin/python /usr/share/apt-xapian-index/update-apt-xapian-index-dbus
+1 S root     12645     2  0  80   0 -     0 worker Mar02 ?        00:00:06 [kworker/2:2]
+1 S root     15011     2  0  80   0 -     0 worker Mar02 ?        00:00:06 [kworker/1:2]
+1 S root     15735     2  0  80   0 -     0 worker Mar02 ?        00:00:22 [kworker/0:0]
+1 S root     15824     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/u16:1]
+0 S varun    17507  3282  0  80   0 -  6821 wait_w Mar02 pts/9    00:00:00 bash
+0 S varun    17898  3282  0  80   0 -  6824 wait_w Mar02 pts/23   00:00:00 bash
+0 S varun    17953  3282  0  80   0 -  6822 wait   Mar02 pts/25   00:00:00 bash
+0 S varun    17976 17953  0  80   0 -  4156 wait   Mar02 pts/25   00:00:00 /bin/bash /usr/bin/subl .
+0 S varun    17977 17976  0  80   0 - 406202 poll_s Mar02 pts/25  00:06:40 /opt/sublime_text_2/sublime_text --class=sublime-text-2 .
+1 S root     18161     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/2:0]
+1 S root     18497     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/2:1]
+1 S root     18733     2  0  60 -20 -     0 rescue Mar02 ?        00:00:00 [dio/sda9]
+4 S varun    19198  1928  0  80   0 - 171299 pipe_w Mar03 ?       00:00:00 /opt/google/chrome/chrome    
+0 S varun    19206 19198  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+0 S varun    19207 19198  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+4 S varun    19236 19198  0  80   0 - 86882 wait   Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+4 S varun    19237 19236  0  80   0 - 32764 skb_re Mar03 ?        00:00:00 /opt/google/chrome/nacl_helper
+1 S varun    19240 19236  0  80   0 - 86882 poll_s Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+1 S varun    19267 19198  0  80   0 - 164471 futex_ Mar03 ?       00:00:00 /opt/google/chrome/chrome    
+0 S varun    19270 19198  0  80   0 - 100011 poll_s Mar03 ?       00:00:06 /opt/google/chrome/chrome --type=gpu-process --channel=19198.0.423859556 --supports-dual-gpus=false --gpu-driver-bug-workarounds=2,52 --disable-gl-extensions=GL_ARB_occlusion_query GL_ARB_occlusion_query2 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor --gpu-driver-version --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+1 S varun    19272 19270  0  80   0 - 95913 skb_re Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=gpu-broker                                                                                                                                                                                                                                                                                                                                     
+4 S varun    19504  1928  0  80   0 - 189784 futex_ Mar03 ?       00:00:58 /opt/google/chrome/chrome    
+0 S varun    19513 19504  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+0 S varun    19514 19504  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+4 S varun    19518 19504  0  80   0 - 86882 wait   Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+4 S varun    19519 19518  0  80   0 - 32764 skb_re Mar03 ?        00:00:00 /opt/google/chrome/nacl_helper
+5 S varun    19522 19518  0  80   0 - 86882 poll_s Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+6 S libvirt+ 19563     1  0  80   0 - 1080916 poll_s Mar04 ?      00:01:10 /usr/bin/qemu-system-x86_64 -name fedora1 -S -machine pc-i440fx-trusty,accel=kvm,usb=off -m 3636 -realtime mlock=off -smp 1,sockets=1,cores=1,threads=1 -uuid f40ff7fd-1d0f-eb27-a860-a91f9fbe55f1 -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/fedora1.monitor,server,nowait -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -no-reboot -boot strict=on -device piix3-usb-uhci,id=usb,bus=pci.0,addr=0x1.0x2 -drive file=/var/lib/libvirt/images/fedora1.img,if=none,id=drive-ide0-0-0,format=raw -device ide-hd,bus=ide.0,unit=0,drive=drive-ide0-0-0,id=ide0-0-0,bootindex=2 -drive file=/home/varun/Downloads/Fedora-Live-Workstation-x86_64-23-10.iso,if=none,id=drive-ide0-1-0,readonly=on,format=raw -device ide-cd,bus=ide.1,unit=0,drive=drive-ide0-1-0,id=ide0-1-0,bootindex=1 -netdev tap,fd=24,id=hostnet0 -device rtl8139,netdev=hostnet0,id=net0,mac=52:54:00:81:9a:28,bus=pci.0,addr=0x3 -chardev pty,id=charserial0 -device isa-serial,chardev=charserial0,id=serial0 -vnc 127.0.0.1:0 -device cirrus-vga,id=video0,bus=pci.0,addr=0x2 -device intel-hda,id=sound0,bus=pci.0,addr=0x4 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 -device virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x5
+1 S root     19566     2  0  80   0 -     0 kthrea Mar04 ?        00:00:00 [kvm-pit/19563]
+1 S varun    19582 19504  0  80   0 - 200083 futex_ Mar03 ?       00:00:00 /opt/google/chrome/chrome    
+1 S varun    19647 19504  0  80   0 - 225619 futex_ Mar03 ?       00:06:34 /opt/google/chrome/chrome    
+0 S varun    20662  1928  0  80   0 - 152965 poll_s Mar04 ?       00:00:00 /usr/bin/python3 /usr/share/unity-scopes/scope-runner-dbus.py -s files/gdrive.scope
+4 S varun    23699  1928  0  80   0 - 226228 futex_ Mar03 ?       00:00:21 /opt/google/chrome/chrome    
+0 S varun    23707 23699  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+0 S varun    23708 23699  0  80   0 -  2854 pipe_w Mar03 ?        00:00:00 cat
+4 S varun    23712 23699  0  80   0 - 86882 wait   Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+4 S varun    23713 23712  0  80   0 - 32764 skb_re Mar03 ?        00:00:00 /opt/google/chrome/nacl_helper
+5 S varun    23720 23712  0  80   0 - 86882 poll_s Mar03 ?        00:00:00 /opt/google/chrome/chrome --type=zygote
+1 S varun    23787 23699  0  80   0 - 201801 futex_ Mar03 ?       00:00:00 /opt/google/chrome/chrome    
+1 S varun    23793 23699  0  80   0 - 204362 futex_ Mar03 ?       00:00:00 /opt/google/chrome/chrome    
+0 S varun    24058  1928  0  80   0 - 162126 poll_s Mar03 ?       00:00:00 /usr/lib/gvfs/gvfsd-recent --spawner :1.18 /org/gtk/gvfs/exec_spaw/4
+0 S varun    24085  3282  0  80   0 -  6833 wait_w Mar03 pts/26   00:00:00 bash
+1 S root     24581     2  0  80   0 -     0 worker Mar04 ?        00:00:00 [kworker/1:1]
+1 S root     26431     2  0  80   0 -     0 worker Mar03 ?        00:00:03 [kworker/3:1]
+0 S varun    28498  1928  2  80   0 - 88463 poll_s Mar04 ?        00:00:01 /usr/bin/python3 /usr/share/oneconf/oneconf-service
+0 S varun    28697  4454  0  80   0 -  4273 wait   00:00 pts/27   00:00:00 /bin/bash ./all.sh
+4 R varun    28814 28697  0  80   0 -  5662 -      00:00 pts/27   00:00:00 ps -efl
+5 S root     29056     1  1  80   0 - 241775 poll_s Mar03 ?       00:38:33 /usr/sbin/libvirtd -d
+5 S libvirt+ 29172     1  0  80   0 -  7053 poll_s Mar03 ?        00:00:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf
+1 S varun    29254  1928  0  80   0 - 340382 poll_s Mar03 ?       00:17:30 python /usr/share/virt-manager/virt-manager.py
+1 S varun    29409  8055 26  80   0 - 307804 futex_ Mar04 ?       00:32:25 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.35.973851054 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+1 S root     30266     2  0  60 -20 -     0 rescue Mar03 ?        00:00:00 [kvm-irqfd-clean]
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.0  33908  3800 ?        Ss   Mar01   0:01 /sbin/init
+root         2  0.0  0.0      0     0 ?        S    Mar01   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Mar01   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        R    Mar01   1:15 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Mar01   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Mar01   0:49 [rcuos/0]
+root        10  0.0  0.0      0     0 ?        S    Mar01   0:00 [rcuob/0]
+root        11  0.0  0.0      0     0 ?        S    Mar01   0:00 [migration/0]
+root        12  0.0  0.0      0     0 ?        S    Mar01   0:00 [watchdog/0]
+root        13  0.0  0.0      0     0 ?        S    Mar01   0:00 [watchdog/1]
+root        14  0.0  0.0      0     0 ?        S    Mar01   0:00 [migration/1]
+root        15  0.0  0.0      0     0 ?        S    Mar01   0:02 [ksoftirqd/1]
+root        17  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/1:0H]
+root        18  0.0  0.0      0     0 ?        S    Mar01   0:29 [rcuos/1]
+root        19  0.0  0.0      0     0 ?        S    Mar01   0:00 [rcuob/1]
+root        20  0.0  0.0      0     0 ?        S    Mar01   0:00 [watchdog/2]
+root        21  0.0  0.0      0     0 ?        S    Mar01   0:00 [migration/2]
+root        22  0.0  0.0      0     0 ?        S    Mar01   0:00 [ksoftirqd/2]
+root        24  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/2:0H]
+root        25  0.0  0.0      0     0 ?        S    Mar01   0:20 [rcuos/2]
+root        26  0.0  0.0      0     0 ?        S    Mar01   0:00 [rcuob/2]
+root        27  0.0  0.0      0     0 ?        S    Mar01   0:00 [watchdog/3]
+root        28  0.0  0.0      0     0 ?        S    Mar01   0:00 [migration/3]
+root        29  0.0  0.0      0     0 ?        S    Mar01   0:00 [ksoftirqd/3]
+root        31  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/3:0H]
+root        32  0.0  0.0      0     0 ?        S    Mar01   0:09 [rcuos/3]
+root        33  0.0  0.0      0     0 ?        S    Mar01   0:00 [rcuob/3]
+root        34  0.0  0.0      0     0 ?        S<   Mar01   0:00 [khelper]
+root        35  0.0  0.0      0     0 ?        S    Mar01   0:00 [kdevtmpfs]
+root        36  0.0  0.0      0     0 ?        S<   Mar01   0:00 [netns]
+root        37  0.0  0.0      0     0 ?        S<   Mar01   0:00 [perf]
+root        38  0.0  0.0      0     0 ?        S    Mar01   0:00 [khungtaskd]
+root        39  0.0  0.0      0     0 ?        S<   Mar01   0:00 [writeback]
+root        40  0.1  0.0      0     0 ?        SN   Mar01   8:07 [ksmd]
+root        41  0.0  0.0      0     0 ?        SN   Mar01   0:13 [khugepaged]
+root        42  0.0  0.0      0     0 ?        S<   Mar01   0:00 [crypto]
+root        43  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kintegrityd]
+root        44  0.0  0.0      0     0 ?        S<   Mar01   0:00 [bioset]
+root        45  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kblockd]
+root        46  0.0  0.0      0     0 ?        S<   Mar01   0:00 [ata_sff]
+root        47  0.0  0.0      0     0 ?        S<   Mar01   0:00 [md]
+root        48  0.0  0.0      0     0 ?        S<   Mar01   0:00 [devfreq_wq]
+root        52  0.0  0.0      0     0 ?        S    Mar01   0:07 [kswapd0]
+root        53  0.0  0.0      0     0 ?        S    Mar01   0:00 [fsnotify_mark]
+root        54  0.0  0.0      0     0 ?        S    Mar01   0:00 [ecryptfs-kthrea]
+root        66  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kthrotld]
+root        67  0.0  0.0      0     0 ?        S<   Mar01   0:00 [acpi_thermal_pm]
+root        73  0.0  0.0      0     0 ?        S<   Mar01   0:00 [ipv6_addrconf]
+root        93  0.0  0.0      0     0 ?        S<   Mar01   0:00 [deferwq]
+root        94  0.0  0.0      0     0 ?        S<   Mar01   0:00 [charger_manager]
+root       145  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kpsmoused]
+root       147  0.0  0.0      0     0 ?        S    Mar01   0:00 [scsi_eh_0]
+root       148  0.0  0.0      0     0 ?        S<   Mar01   0:00 [scsi_tmf_0]
+root       149  0.0  0.0      0     0 ?        S    Mar01   0:00 [scsi_eh_1]
+root       150  0.0  0.0      0     0 ?        S<   Mar01   0:00 [scsi_tmf_1]
+root       151  0.0  0.0      0     0 ?        S    Mar01   0:00 [scsi_eh_2]
+root       152  0.0  0.0      0     0 ?        S<   Mar01   0:00 [scsi_tmf_2]
+root       153  0.0  0.0      0     0 ?        S    Mar01   0:00 [scsi_eh_3]
+root       154  0.0  0.0      0     0 ?        S<   Mar01   0:00 [scsi_tmf_3]
+root       158  0.0  0.0      0     0 ?        S<   Mar01   0:00 [rtsx_pci_sdmmc_]
+root       174  0.0  0.0      0     0 ?        S    Mar01   0:02 [jbd2/sda8-8]
+root       175  0.0  0.0      0     0 ?        S<   Mar01   0:00 [ext4-rsv-conver]
+root       303  0.0  0.0  19744  1744 ?        S    Mar01   0:00 upstart-udev-bridge --daemon
+root       308  0.0  0.0      0     0 ?        S<   Mar01   0:02 [kworker/2:1H]
+root       309  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/3:1H]
+root       320  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/1:1H]
+root       343  0.0  0.0  51952  2880 ?        Ss   Mar01   0:01 /lib/systemd/systemd-udevd --daemon
+root       359  0.0  0.0      0     0 ?        S    Mar01   0:05 [jbd2/sda9-8]
+root       360  0.0  0.0      0     0 ?        S<   Mar01   0:00 [ext4-rsv-conver]
+root       399  0.0  0.0      0     0 ?        S    Mar01   0:00 [irq/51-mei_me]
+root       422  0.0  0.0      0     0 ?        S<   Mar01   0:00 [cfg80211]
+root       432  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kmemstick]
+root       433  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/u17:0]
+root       434  0.0  0.0      0     0 ?        S<   Mar01   0:00 [hci0]
+root       435  0.0  0.0      0     0 ?        S<   Mar01   0:00 [hci0]
+root       436  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/u17:1]
+root       449  0.1  0.0      0     0 ?        S    Mar01   8:58 [irq/52-iwlwifi]
+root       471  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kworker/0:1H]
+root       502  0.0  0.0      0     0 ?        S<   Mar01   0:00 [hd-audio0]
+root       506  0.0  0.0      0     0 ?        S<   Mar01   0:00 [hd-audio1]
+root       527  0.0  0.0      0     0 ?        S<   Mar01   0:00 [kfd_process_wq]
+root       528  0.0  0.0      0     0 ?        S<   Mar01   0:00 [ttm_swap]
+root       609  0.0  0.0  15264  1492 ?        S    Mar01   0:00 upstart-socket-bridge --daemon
+root       651  0.0  0.0  15280  1484 ?        S    Mar01   0:00 upstart-file-bridge --daemon
+root       667  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+root       668  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+root       669  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+root       670  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+root       671  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+root       672  0.0  0.0      0     0 ?        S<   Mar01   0:00 [radeon-crtc]
+syslog     767  0.0  0.0 255848  2012 ?        Ssl  Mar01   0:00 rsyslogd
+message+   794  0.0  0.0  40788  3548 ?        Ss   Mar01   0:10 dbus-daemon --system --fork
+root       807  0.0  0.0 330236  3336 ?        Ssl  Mar01   0:00 /usr/sbin/ModemManager
+avahi      821  0.0  0.0  32476  2112 ?        S    Mar01   0:13 avahi-daemon: running [varun-Lenovo-Y40-80.local]
+avahi      823  0.0  0.0  32228    44 ?        S    Mar01   0:00 avahi-daemon: chroot helper
+root       827  0.0  0.0  19300  1804 ?        Ss   Mar01   0:00 /usr/sbin/bluetoothd
+root       834  0.0  0.0  43564  2572 ?        Ss   Mar01   0:00 /lib/systemd/systemd-logind
+root       838  0.0  0.0      0     0 ?        S<   Mar01   0:00 [krfcommd]
+root       853  0.0  0.0 361812  7992 ?        Ssl  Mar01   0:25 NetworkManager
+root       920  0.0  0.0 304312  7224 ?        Sl   Mar01   0:18 /usr/lib/policykit-1/polkitd --no-debug
+root       942  0.0  0.0  75360  2316 ?        Ss   Mar01   0:00 /usr/sbin/cups-browsed
+root       946  0.2  0.0  30752  2988 ?        Ss   Mar01   9:27 /sbin/wpa_supplicant -B -P /run/sendsigs.omit.d/wpasupplicant.pid -u -s -O /var/run/wpa_supplicant
+root      1038  0.0  0.0  20020  1560 tty4     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty4
+root      1042  0.0  0.0  20020  1500 tty5     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty5
+root      1043  0.0  0.0 125596  3180 ?        Ssl  Mar01   0:15 thermald --no-daemon --dbus-enable
+root      1047  0.0  0.0      0     0 ?        S    Mar04   0:01 [kworker/u16:0]
+root      1048  0.0  0.0  20020  1508 tty2     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty2
+root      1049  0.0  0.0  20020  1488 tty3     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty3
+root      1052  0.0  0.0  20020  1576 tty6     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty6
+root      1107  0.0  0.0  19296  1572 ?        Ss   Mar01   0:15 /usr/sbin/irqbalance
+root      1109  0.0  0.0   4372  1428 ?        Ss   Mar01   0:05 acpid -c /etc/acpi/events -s /var/run/acpid.socket
+kernoops  1122  0.0  0.0  37152  1808 ?        Ss   Mar01   0:02 /usr/sbin/kerneloops
+root      1134  0.0  0.0  23660  1740 ?        Ss   Mar01   0:00 cron
+root      1186  0.0  0.0  20020  1512 tty1     Ss+  Mar01   0:00 /sbin/getty -8 38400 tty1
+whoopsie  1192  0.0  0.0 437240  6552 ?        Ssl  Mar01   0:00 whoopsie
+root      1206  0.0  0.0 292660  3652 ?        SLsl Mar01   0:00 lightdm
+root      1217  1.0  3.2 879748 262600 tty7    Ssl+ Mar01  46:12 /usr/bin/X -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root      1220  0.0  0.0 302596  4864 ?        Sl   Mar01   0:04 /usr/lib/accountsservice/accounts-daemon
+root      1243  0.0  0.0      0     0 ?        S    Mar01   0:00 [kauditd]
+root      1289  0.0  0.0 170528  4620 ?        Sl   Mar01   0:00 lightdm --session-child 12 19
+root      1319  0.0  0.0 304892  4352 ?        Sl   Mar01   0:00 /usr/lib/upower/upowerd
+rtkit     1332  0.0  0.0 168920  1904 ?        SNl  Mar01   0:02 /usr/lib/rtkit/rtkit-daemon
+colord    1500  0.0  0.0 311024  5208 ?        Sl   Mar01   0:00 /usr/lib/colord/colord
+nobody    1542  0.0  0.0  35228  2096 ?        S    Mar01   0:03 /usr/sbin/dnsmasq --no-resolv --keep-in-foreground --no-hosts --bind-interfaces --pid-file=/run/sendsigs.omit.d/network-manager.dnsmasq.pid --listen-address=127.0.1.1 --conf-file=/var/run/NetworkManager/dnsmasq.conf --cache-size=0 --proxy-dnssec --enable-dbus=org.freedesktop.NetworkManager.dnsmasq --conf-dir=/etc/NetworkManager/dnsmasq.d
+varun     1924  0.0  0.0 1133920 7684 ?        SLl  Mar01   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+varun     1928  0.0  0.0  40200  3352 ?        Ss   Mar01   0:02 init --user
+varun     1999  0.2  1.8 856120 151084 ?       Sl   Mar04   0:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.41.1589852668 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     2012  0.0  0.0  40824  3780 ?        Ss   Mar01   0:21 dbus-daemon --fork --session --address=unix:abstract=/tmp/dbus-NN6YKR220x
+varun     2024  0.0  0.0  22304  1580 ?        Ss   Mar01   0:00 upstart-event-bridge
+varun     2030  0.0  0.0  78328  2332 ?        Ss   Mar01   0:01 /usr/lib/x86_64-linux-gnu/hud/window-stack-bridge
+varun     2051  0.0  0.0  30788  1828 ?        S    Mar01   0:00 upstart-file-bridge --daemon --user
+varun     2052  0.0  0.0  22392  1492 ?        S    Mar01   0:03 upstart-dbus-bridge --daemon --session --user --bus-name session
+varun     2053  0.0  0.3 392112 24612 ?        Ssl  Mar01   3:05 /usr/bin/ibus-daemon --daemonize --xim
+varun     2055  0.0  0.0  22312   112 ?        S    Mar01   0:00 upstart-dbus-bridge --daemon --system --user --bus-name system
+varun     2076  0.0  0.0 178328  3164 ?        Sl   Mar01   0:00 /usr/lib/dconf/dconf-service
+varun     2103  0.0  0.2 565580 17368 ?        Sl   Mar01   0:31 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+varun     2105  0.0  0.0 367680  3620 ?        Sl   Mar01   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+varun     2109  0.0  0.0  39384  2880 ?        S    Mar01   0:01 /bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+varun     2112  0.0  0.0 125048  3504 ?        Sl   Mar01   0:11 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+varun     2118  0.0  0.0 418616  4504 ?        Sl   Mar01   0:01 /usr/lib/gvfs/gvfsd
+varun     2122  0.0  0.0 360432  3556 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+varun     2133  0.0  0.0  58264  4560 ?        S    Mar01   0:00 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+varun     2143  0.0  0.0 295776  4036 ?        Sl   Mar01   0:00 /usr/lib/ibus/ibus-dconf
+varun     2144  0.0  0.2 499624 22864 ?        Sl   Mar01   0:38 /usr/lib/ibus/ibus-ui-gtk3
+varun     2146  0.0  0.1 397144  8396 ?        Sl   Mar01   0:00 /usr/lib/ibus/ibus-x11 --kill-daemon
+varun     2160  0.0  0.0 219920  3656 ?        Sl   Mar01   0:36 /usr/lib/ibus/ibus-engine-simple
+varun     2195  0.0  0.1 823652 14160 ?        Ssl  Mar01   0:05 /usr/lib/unity-settings-daemon/unity-settings-daemon
+varun     2200  0.0  0.6 692572 49156 ?        Ssl  Mar01   0:38 /usr/lib/x86_64-linux-gnu/hud/hud-service
+varun     2210  0.0  0.1 594036  9576 ?        Ssl  Mar01   0:01 gnome-session --session=ubuntu
+varun     2215  0.0  0.8 619616 69276 ?        Ssl  Mar01   1:07 /usr/lib/unity/unity-panel-service
+varun     2269  0.0  0.0  22444  1704 ?        S    Mar01   0:03 syndaemon -i 1.0 -t -K -R
+varun     2273  0.0  0.0 513668  7092 ?        S<l  Mar01   3:32 /usr/bin/pulseaudio --start --log-target=syslog
+varun     2290  0.0  0.1 608756  9872 ?        Sl   Mar01   0:01 /usr/lib/x86_64-linux-gnu/indicator-keyboard-service --use-gtk
+varun     2295  0.0  0.0 365548  3844 ?        Ssl  Mar01   0:03 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+varun     2296  0.0  0.0 293752  3488 ?        Ssl  Mar01   0:00 /usr/lib/x86_64-linux-gnu/indicator-bluetooth/indicator-bluetooth-service
+varun     2298  0.0  0.0 295696  3976 ?        Ssl  Mar01   0:00 /usr/lib/x86_64-linux-gnu/indicator-power/indicator-power-service
+varun     2303  0.0  0.0 1164596 5732 ?        Ssl  Mar01   0:03 /usr/lib/x86_64-linux-gnu/indicator-datetime/indicator-datetime-service
+varun     2305  0.0  0.0 569464  7016 ?        Ssl  Mar01   0:03 /usr/lib/x86_64-linux-gnu/indicator-sound/indicator-sound-service
+varun     2309  0.0  0.1 456776 12164 ?        Ssl  Mar01   0:00 /usr/lib/x86_64-linux-gnu/indicator-printers/indicator-printers-service
+varun     2325  0.0  0.0 906396  6712 ?        Ssl  Mar01   0:01 /usr/lib/x86_64-linux-gnu/indicator-session/indicator-session-service
+varun     2326  0.0  0.0 286756  4516 ?        Ssl  Mar01   0:00 /usr/lib/x86_64-linux-gnu/indicator-application/indicator-application-service
+varun     2350  0.0  0.0 1107040 5208 ?        Sl   Mar01   0:00 /usr/lib/evolution/evolution-source-registry
+varun     2352  0.0  0.1 430732 11028 ?        Sl   Mar01   0:01 /usr/lib/x86_64-linux-gnu/notify-osd
+varun     2372  1.2  3.8 1601432 309032 ?      Sl   Mar01  55:10 compiz
+varun     2385  0.0  0.0 1096224 7780 ?        Sl   Mar01   0:00 /usr/lib/evolution/evolution-calendar-factory
+varun     2396  0.0  0.1 653852 16000 ?        Sl   Mar01   0:01 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+varun     2397  0.0  0.1 558844 10520 ?        Sl   Mar01   0:01 /usr/lib/unity-settings-daemon/unity-fallback-mount-helper
+varun     2401  0.0  0.6 1766240 53796 ?       Sl   Mar01   1:02 nautilus -n
+varun     2410  0.0  0.0 385328  6260 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+root      2417  0.0  0.0 451980  5596 ?        Sl   Mar01   0:25 /usr/lib/udisks2/udisksd --no-debug
+varun     2426  0.0  0.0 212444  3568 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+varun     2430  0.0  0.0 285968  2940 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+varun     2435  0.0  0.0 217408  4608 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+varun     2446  0.0  0.0 964200  6600 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.18 /org/gtk/gvfs/exec_spaw/0
+varun     2453  0.0  0.0 270384  2104 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd-burn --spawner :1.18 /org/gtk/gvfs/exec_spaw/1
+varun     2466  0.0  0.0 124520  3480 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd-metadata
+varun     2502  6.2 13.1 2505368 1067620 ?     Sl   Mar01 281:11 /usr/lib/firefox/firefox
+varun     2532  0.0  0.0 287220  3604 ?        Sl   Mar01   0:00 /usr/lib/libunity-webapps/unity-webapps-service
+varun     2541  0.0  0.1 457900  8656 ?        Sl   Mar01   0:00 telepathy-indicator
+varun     2554  0.0  0.0 336696  4956 ?        Sl   Mar01   0:01 /usr/lib/telepathy/mission-control-5
+varun     2591  0.0  0.0 774448  6824 ?        Sl   Mar01   0:10 zeitgeist-datahub
+varun     2596  0.0  0.0 363908  6108 ?        Sl   Mar01   0:01 /usr/bin/zeitgeist-daemon
+varun     2598  0.0  1.0 783832 83148 ?        Sl   Mar04   0:02 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.47.981250406 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     2610  0.0  0.1 331364  9788 ?        Sl   Mar01   0:05 /usr/lib/x86_64-linux-gnu/zeitgeist-fts
+varun     2631  0.0  0.0  11416    60 ?        S    Mar01   0:00 /bin/cat
+varun     2650  0.0  0.1 658676 15328 ?        Sl   Mar01   0:02 update-notifier
+varun     2852  0.0  0.0 459136  5084 ?        Sl   Mar01   0:01 /usr/lib/x86_64-linux-gnu/deja-dup/deja-dup-monitor
+root      2993  0.0  0.0  10236  1772 ?        S    Mar01   0:00 /sbin/dhclient -d -sf /usr/lib/NetworkManager/nm-dhcp-client.action -pf /run/sendsigs.omit.d/network-manager.dhclient-eth0.pid -lf /var/lib/NetworkManager/dhclient-2b0b6a60-4e5b-46e2-86b0-926907c12dd3-eth0.lease -cf /var/lib/NetworkManager/dhclient-eth0.conf eth0
+root      3255  0.0  0.0  92012  6768 ?        S    Mar01   0:00 /usr/bin/python /usr/lib/system-service/system-service-d
+varun     3282  0.0  0.3 672472 27244 ?        Sl   Mar01   1:18 gnome-terminal
+varun     3289  0.0  0.0  14828  1716 ?        S    Mar01   0:00 gnome-pty-helper
+varun     3290  0.0  0.0  26884  2616 pts/1    Ss+  Mar01   0:00 bash
+root      3449  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/u16:2]
+root      3834  0.0  0.0  24444  1268 ?        S    Mar01   0:00 dbus-launch --autolaunch=ee6242b96c7757a4b77da61856d5fe52 --binary-syntax --close-stderr
+root      3835  0.0  0.0  39220  2168 ?        Ss   Mar01   0:00 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+root      3840  0.0  0.0 178208  2996 ?        Sl   Mar01   0:00 /usr/lib/dconf/dconf-service
+root      3842  0.0  0.0 289908  3920 ?        Sl   Mar01   0:00 /usr/bin/zeitgeist-daemon
+root      3859  0.0  0.0 708432  6296 ?        Sl   Mar01   0:03 zeitgeist-datahub
+root      3871  0.0  0.0 196648  3220 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd
+root      3876  0.0  0.0 360432  3248 ?        Sl   Mar01   0:00 /usr/lib/gvfs/gvfsd-fuse /root/.gvfs -f -o big_writes
+varun     3880  0.3  1.5 1142424 123120 ?      Sl   Mar04   0:06 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.53.1667135711 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     3922  0.0  0.1 679300 15708 ?        Sl   Mar01   0:06 /usr/lib/x86_64-linux-gnu/unity-scope-home/unity-scope-home
+varun     3934  0.0  0.2 670916 18172 ?        Sl   Mar01   0:06 /usr/bin/unity-scope-loader applications/applications.scope applications/scopes.scope commands.scope
+varun     3938  0.0  0.1 1266224 9144 ?        Sl   Mar01   0:03 /usr/lib/x86_64-linux-gnu/unity-lens-files/unity-files-daemon
+varun     3975  0.0  0.3 972220 26956 ?        Sl   Mar01   0:01 nm-applet
+nobody    4140  0.0  0.0  35232  2012 ?        S    Mar01   0:03 /usr/sbin/dnsmasq --conf-file --no-hosts --keep-in-foreground --bind-interfaces --except-interface=lo --clear-on-reload --strict-order --listen-address=10.42.0.1 --dhcp-range=10.42.0.10,10.42.0.100,60m --dhcp-option=option:router,10.42.0.1 --dhcp-lease-max=50 --pid-file=/var/run/nm-dnsmasq-wlan0.pid
+varun     4203  0.6  0.8 512464 70980 ?        Sl   Mar04   0:11 /opt/google/chrome/chrome --type=ppapi --channel=8038.54.1225952921 --ppapi-flash-args --lang=en-US --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     4424  0.0  0.0 251796  5200 ?        Sl   Mar01   0:00 /usr/lib/geoclue/geoclue-master
+varun     4428  0.0  0.0 336608  4824 ?        Sl   Mar01   0:00 /usr/lib/x86_64-linux-gnu/ubuntu-geoip-provider
+varun     4453  0.0  0.4 1555004 36276 ?       Sl   Mar01   0:08 /usr/lib/gvfs/gvfsd-http --spawner :1.18 /org/gtk/gvfs/exec_spaw/2
+varun     4454  0.0  0.0  27340  5928 pts/27   Ss   Mar04   0:00 bash
+varun     5072  0.2  0.4 747308 33520 ?        Sl   Mar01  10:40 xchat
+varun     5229  0.0  0.0 350232  6768 ?        Sl   Mar01   0:03 /usr/lib/x86_64-linux-gnu/unity-lens-music/unity-music-daemon
+root      5236  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/0:2]
+root      5239  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/3:0]
+varun     5342  0.0  0.0 137608  3340 ?        Sl   Mar01   0:00 /usr/lib/libreoffice/program/oosplash --writer
+varun     5372  0.0  1.7 1651320 140248 ?      Sl   Mar01   0:27 /usr/lib/libreoffice/program/soffice.bin --writer --splash-pipe=5
+root      6792  0.0  0.0  76860  5232 ?        Ss   Mar04   0:00 /usr/sbin/cupsd -f
+lp        6795  0.0  0.0  63164  3424 ?        S    Mar04   0:00 /usr/lib/cups/notifier/dbus dbus:// 
+varun     8038  0.4  1.8 1285868 145992 ?      SLl  Mar03   8:41 /opt/google/chrome/chrome    
+varun     8046  0.0  0.0  11416   184 ?        S    Mar03   0:00 cat
+varun     8047  0.0  0.0  11416   156 ?        S    Mar03   0:00 cat
+varun     8051  0.0  0.1 347528 13404 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun     8052  0.0  0.0 131056  2032 ?        S    Mar03   0:00 /opt/google/chrome/nacl_helper
+varun     8055  0.0  0.1 347528  9672 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun     8115  0.3  2.5 831940 206696 ?       Sl   Mar03   7:52 /opt/google/chrome/chrome --type=gpu-process --channel=8038.0.1522775727 --supports-dual-gpus=false --gpu-driver-bug-workarounds=2,3,19,21,52 --disable-gl-extensions=GL_ARB_occlusion_query GL_ARB_occlusion_query2 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor=Mesa --gpu-driver-version=10.5.2 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     8144  0.0  0.4 761032 40456 ?        Sl   Mar03   0:01 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/SafeBrowsingUpdateFrequency/Default/SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --extension-process --enable-webrtc-hw-h264-encoding --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.2.991246969 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun     8145  0.0  0.2 383652 17332 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=gpu-broker                                                                                                                                                                                                                                                                                                                                                         
+varun     8208  0.5  3.9 1160260 315992 ?      Sl   Mar03  10:46 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.3.336371169 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+root      8668  0.0  0.1  76312  8540 ?        S    Mar01   0:00 /usr/bin/python /usr/share/apt-xapian-index/update-apt-xapian-index-dbus
+root     12645  0.0  0.0      0     0 ?        S    Mar02   0:06 [kworker/2:2]
+root     15011  0.0  0.0      0     0 ?        S    Mar02   0:06 [kworker/1:2]
+root     15735  0.0  0.0      0     0 ?        S    Mar02   0:22 [kworker/0:0]
+root     15824  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/u16:1]
+varun    17507  0.0  0.0  27284  4164 pts/9    Ss+  Mar02   0:00 bash
+varun    17898  0.0  0.0  27296  3244 pts/23   Ss+  Mar02   0:00 bash
+varun    17953  0.0  0.0  27288  3132 pts/25   Ss   Mar02   0:00 bash
+varun    17976  0.0  0.0  16624  1280 pts/25   S+   Mar02   0:00 /bin/bash /usr/bin/subl .
+varun    17977  0.2  1.0 1624808 88228 pts/25  Sl+  Mar02   6:40 /opt/sublime_text_2/sublime_text --class=sublime-text-2 .
+root     18161  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/2:0]
+root     18497  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/2:1]
+root     18733  0.0  0.0      0     0 ?        S<   Mar02   0:00 [dio/sda9]
+varun    19198  0.0  0.3 685196 29168 ?        Sl   Mar03   0:00 /opt/google/chrome/chrome    
+varun    19206  0.0  0.0  11416   292 ?        S    Mar03   0:00 cat
+varun    19207  0.0  0.0  11416   172 ?        S    Mar03   0:00 cat
+varun    19236  0.0  0.1 347528 13504 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun    19237  0.0  0.0 131056  2016 ?        S    Mar03   0:00 /opt/google/chrome/nacl_helper
+varun    19240  0.0  0.0 347528  7908 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun    19267  0.0  0.1 657884 11312 ?        S    Mar03   0:00 /opt/google/chrome/chrome    
+varun    19270  0.0  0.2 400044 24232 ?        Sl   Mar03   0:06 /opt/google/chrome/chrome --type=gpu-process --channel=19198.0.423859556 --supports-dual-gpus=false --gpu-driver-bug-workarounds=2,52 --disable-gl-extensions=GL_ARB_occlusion_query GL_ARB_occlusion_query2 --disable-accelerated-video-decode --gpu-vendor-id=0x8086 --gpu-device-id=0x1616 --gpu-driver-vendor --gpu-driver-version --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+varun    19272  0.0  0.2 383652 17552 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=gpu-broker                                                                                                                                                                                                                                                                                                                                     
+varun    19504  0.0  0.7 759136 59692 ?        Sl   Mar03   0:58 /opt/google/chrome/chrome    
+varun    19513  0.0  0.0  11416   184 ?        S    Mar03   0:00 cat
+varun    19514  0.0  0.0  11416   212 ?        S    Mar03   0:00 cat
+varun    19518  0.0  0.1 347528 13408 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun    19519  0.0  0.0 131056  1904 ?        S    Mar03   0:00 /opt/google/chrome/nacl_helper
+varun    19522  0.0  0.1 347528  9396 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+libvirt+ 19563  0.4 25.3 4323664 2053428 ?     Sl   Mar04   1:10 /usr/bin/qemu-system-x86_64 -name fedora1 -S -machine pc-i440fx-trusty,accel=kvm,usb=off -m 3636 -realtime mlock=off -smp 1,sockets=1,cores=1,threads=1 -uuid f40ff7fd-1d0f-eb27-a860-a91f9fbe55f1 -no-user-config -nodefaults -chardev socket,id=charmonitor,path=/var/lib/libvirt/qemu/fedora1.monitor,server,nowait -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc -no-reboot -boot strict=on -device piix3-usb-uhci,id=usb,bus=pci.0,addr=0x1.0x2 -drive file=/var/lib/libvirt/images/fedora1.img,if=none,id=drive-ide0-0-0,format=raw -device ide-hd,bus=ide.0,unit=0,drive=drive-ide0-0-0,id=ide0-0-0,bootindex=2 -drive file=/home/varun/Downloads/Fedora-Live-Workstation-x86_64-23-10.iso,if=none,id=drive-ide0-1-0,readonly=on,format=raw -device ide-cd,bus=ide.1,unit=0,drive=drive-ide0-1-0,id=ide0-1-0,bootindex=1 -netdev tap,fd=24,id=hostnet0 -device rtl8139,netdev=hostnet0,id=net0,mac=52:54:00:81:9a:28,bus=pci.0,addr=0x3 -chardev pty,id=charserial0 -device isa-serial,chardev=charserial0,id=serial0 -vnc 127.0.0.1:0 -device cirrus-vga,id=video0,bus=pci.0,addr=0x2 -device intel-hda,id=sound0,bus=pci.0,addr=0x4 -device hda-duplex,id=sound0-codec0,bus=sound0.0,cad=0 -device virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x5
+root     19566  0.0  0.0      0     0 ?        S    Mar04   0:00 [kvm-pit/19563]
+varun    19582  0.0  0.2 800332 24096 ?        S    Mar03   0:00 /opt/google/chrome/chrome    
+varun    19647  0.2  0.4 902476 32732 ?        S    Mar03   6:34 /opt/google/chrome/chrome    
+varun    20662  0.0  0.3 611860 26664 ?        Sl   Mar04   0:00 /usr/bin/python3 /usr/share/unity-scopes/scope-runner-dbus.py -s files/gdrive.scope
+varun    23699  0.0  0.8 904912 68456 ?        Sl   Mar03   0:21 /opt/google/chrome/chrome    
+varun    23707  0.0  0.0  11416   188 ?        S    Mar03   0:00 cat
+varun    23708  0.0  0.0  11416   152 ?        S    Mar03   0:00 cat
+varun    23712  0.0  0.1 347528 13420 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun    23713  0.0  0.0 131056  2020 ?        S    Mar03   0:00 /opt/google/chrome/nacl_helper
+varun    23720  0.0  0.1 347528  9428 ?        S    Mar03   0:00 /opt/google/chrome/chrome --type=zygote
+varun    23787  0.0  0.2 807204 22564 ?        S    Mar03   0:00 /opt/google/chrome/chrome    
+varun    23793  0.0  0.2 817448 24208 ?        S    Mar03   0:00 /opt/google/chrome/chrome    
+varun    24058  0.0  0.1 648504 14464 ?        Sl   Mar03   0:00 /usr/lib/gvfs/gvfsd-recent --spawner :1.18 /org/gtk/gvfs/exec_spaw/4
+varun    24085  0.0  0.0  27332  4336 pts/26   Ss+  Mar03   0:00 bash
+root     24581  0.0  0.0      0     0 ?        S    Mar04   0:00 [kworker/1:1]
+root     26431  0.0  0.0      0     0 ?        S    Mar03   0:03 [kworker/3:1]
+varun    28498  2.1  0.4 353852 33524 ?        Sl   Mar04   0:01 /usr/bin/python3 /usr/share/oneconf/oneconf-service
+varun    28697  0.0  0.0  17092  3552 pts/27   S+   00:00   0:00 /bin/bash ./all.sh
+varun    28815  0.0  0.0  22648  2632 pts/27   R+   00:00   0:00 ps aux
+root     29056  1.7  0.2 967100 17760 ?        Sl   Mar03  38:33 /usr/sbin/libvirtd -d
+libvirt+ 29172  0.0  0.0  28212  1836 ?        S    Mar03   0:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf
+varun    29254  0.7  1.3 1361528 109424 ?      Ssl  Mar03  17:30 python /usr/share/virt-manager/virt-manager.py
+varun    29409 26.2  4.4 1231216 364024 ?      Sl   Mar04  32:25 /opt/google/chrome/chrome --type=renderer --lang=en-US --force-fieldtrials=*AffiliationBasedMatching/EnabledThroughFieldTrial/AppBannerTriggering/Aggressive/AutofillProfileOrderByFrecency/Enabled/CaptivePortalInterstitial/Enabled/*ChildAccountDetection/Disabled/*ChromeSuggestions/Default/*ClientSideDetectionModel/Model0/*CrossDevicePromo/28DaySingleProfile/*ExtensionActionRedesign/Enabled/*ExtensionDeveloperModeWarning/Default/*GFE/Default/InstanceID/Enabled/LinuxObsoleteSystemIsEndOfTheLine/NotYetEndOfLine/*OmniboxBundledExperimentV1/Unused_2/*PasswordBranding/Disabled/*PasswordGeneration/Disabled/*QUIC/EnabledNoId/ReportCertificateErrors/ShowAndPossiblySend/*ResourcePriorities/Disabled/SHA1IdentityUIWarning/Enabled/SHA1ToolbarUIJanuary2016/Warning/SHA1ToolbarUIJanuary2017/Error/*SafeBrowsingIncidentReportingService/Default/SafeBrowsingUnverifiedDownloads/DisableByParameterMostSbTypes2/*SafeBrowsingUpdateFrequency/Default/*SpdyEnableDependencies/Default/*UMA-Population-Restrict/normal/*UMA-Uniformity-Trial-100-Percent/group_01/*UMA-Uniformity-Trial-20-Percent/group_01/*UMA-Uniformity-Trial-50-Percent/default/*UseDelayAgnosticAEC/DefaultEnabled/*VarationsServiceControl/Interval_30min/WebRTC-LocalIPPermissionCheck/Disabled/WebRTC-PeerConnectionDTLS1.2/Enabled/ --enable-offline-auto-reload --enable-offline-auto-reload-visible-only --num-raster-threads=2 --content-image-texture-target=3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553,3553 --video-image-texture-target=3553 --disable-accelerated-video-decode --channel=8038.35.973851054 --v8-natives-passed-by-fd --v8-snapshot-passed-by-fd
+root     30266  0.0  0.0      0     0 ?        S<   Mar03   0:00 [kvm-irqfd-clean]
+Sat Mar  5 00:00:29 IST 2016

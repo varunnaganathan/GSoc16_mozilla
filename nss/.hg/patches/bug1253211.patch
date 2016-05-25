@@ -1,0 +1,518 @@
+# HG changeset patch
+# Parent a61e85d5a3676dbb05f194c735352243c2f89dc5
+# User Varun Naganathan <varunnaganathan912@gmail.com>
+Bug 1253211 - changed the storage of objects to a hash map to optimize query operations
+
+
+diff --git a/lib/pki/pkibase.c b/lib/pki/pkibase.c
+--- a/lib/pki/pkibase.c
++++ b/lib/pki/pkibase.c
+@@ -6,19 +6,71 @@
+ #include "dev.h"
+ #endif /* DEV_H */
+ 
+ #ifndef PKIM_H
+ #include "pkim.h"
+ #endif /* PKIM_H */
+ 
+ #include "pki3hack.h"
++#include "plhash.h"
+ 
+ extern const NSSError NSS_ERROR_NOT_FOUND;
+ 
++#define MAX_ITEMS_FOR_UID 2
++
++/* Function to compare the keys of the object hash table */
++static PRBool
++compare_objects(const void *v1, const void *v2)
++{
++    const NSSItem *uid_one = v1;
++    const NSSItem *uid_two = v2;
++    int i = 0;
++    PRStatus status; 
++    for(i=0;i<MAX_ITEMS_FOR_UID;i++) {
++      if(!nssItem_Equal(&uid_one[i], &uid_two[i], &status)) {
++        return PR_FALSE;
++      }
++    }
++    return PR_TRUE;
++}
++
++/* Function to compare the keys of the instance hash table */
++static PRBool
++compare_instances(const void *v1, const void *v2)
++{
++  const nssCryptokiObject *one = v1;
++  const nssCryptokiObject *two = v2;
++  return (one->token == two->token && one->handle == two->handle);  
++}
++
++/* hash function for the object hash table */
++static PLHashNumber
++hash_object(const void  *arg)
++{
++  const NSSItem *uid=arg;
++  PLHashNumber hashvalue = uid[0].size;
++  int i;
++  for (i=1;i<MAX_ITEMS_FOR_UID;i++) {
++      /* hash function can be improved */
++      hashvalue =  hashvalue ^ uid[i].size;
++  }
++  return hashvalue; 
++}
++
++/* hash function for the instance hash table */
++static PLHashNumber
++hash_instance(const void  *arg)
++{
++  const nssCryptokiObject *key = arg;
++  /* hash function can be improved */
++  PLHashNumber hashvalue =  (PLHashNumber)((unsigned long)key->token) ^ (PLHashNumber)((unsigned long)key->handle);
++  return hashvalue;
++}
++
+ NSS_IMPLEMENT void
+ nssPKIObject_Lock(nssPKIObject * object)
+ {
+     switch (object->lockType) {
+     case nssPKIMonitor:
+         PZ_EnterMonitor(object->sync.mlock);
+         break;
+     case nssPKILock:
+@@ -579,44 +631,62 @@ typedef enum
+ /* Each object is defined by a set of items that uniquely identify it.
+  * Here are the uid sets:
+  *
+  * NSSCertificate ==>  { issuer, serial }
+  * NSSPrivateKey
+  *         (RSA) ==> { modulus, public exponent }
+  *
+  */
+-#define MAX_ITEMS_FOR_UID 2
++
+ 
+ /* pkiObjectCollectionNode
+  *
+  * A node in the collection is the set of unique identifiers for a single
+  * object, along with either the actual object or a proto-object.
+  */
+ typedef struct
+ {
+   PRCList link;
+   PRBool haveObject;
+   nssPKIObject *object;
+   NSSItem uid[MAX_ITEMS_FOR_UID];
+ } 
+ pkiObjectCollectionNode;
+ 
++/* struct for the coolection traversal callback */
++typedef struct collection_Traverse_arg
++{
++  nssPKIObjectCollection *collection;
++  nssPKIObjectCallback *callback;
++}collection_Traverse_arg;
++
++/* The struct required for the callback used for the nssPKIObjectCollection_GetObjects function */ 
++struct get_obj_args
++{
++ nssPKIObjectCollection *collection;
++ nssPKIObject **rvObjects;
++ PRUint32 rvSize;
++ PRUint32 nr_objs;
++ int error;
++};
++
+ /* nssPKIObjectCollection
+  *
+  * The collection is the set of all objects, plus the interfaces needed
+  * to manage the objects.
+  *
+  */
+ struct nssPKIObjectCollectionStr
+ {
+   NSSArena *arena;
+   NSSTrustDomain *td;
+   NSSCryptoContext *cc;
+-  PRCList head; /* list of pkiObjectCollectionNode's */
++  PLHashTable *PKIobjecthashtable; /* hash table for all the distinct objects*/
++  PLHashTable *PKIinstancehashtable; /* hash table for multiple instances of the same object*/
+   PRUint32 size;
+   pkiObjectType objectType;
+   void           (*      destroyObject)(nssPKIObject *o);
+   PRStatus       (*   getUIDFromObject)(nssPKIObject *o, NSSItem *uid);
+   PRStatus       (* getUIDFromInstance)(nssCryptokiObject *co, NSSItem *uid, 
+                                         NSSArena *arena);
+   nssPKIObject * (*       createObject)(nssPKIObject *o);
+   nssPKILockType lockType; /* type of lock to use for new proto-objects */
+@@ -634,46 +704,41 @@ nssPKIObjectCollection_Create (
+     arena = nssArena_Create();
+     if (!arena) {
+ 	return (nssPKIObjectCollection *)NULL;
+     }
+     rvCollection = nss_ZNEW(arena, nssPKIObjectCollection);
+     if (!rvCollection) {
+ 	goto loser;
+     }
+-    PR_INIT_CLIST(&rvCollection->head);
++    rvCollection->PKIobjecthashtable = PL_NewHashTable(0, hash_object, 
++                                                       compare_objects, PL_CompareValues,
++                                                             NULL, NULL);
++    rvCollection->PKIinstancehashtable = PL_NewHashTable(0, hash_instance, 
++                                                         compare_instances, PL_CompareValues, 
++                                                               NULL, NULL);
+     rvCollection->arena = arena;
+     rvCollection->td = td; /* XXX */
+     rvCollection->cc = ccOpt;
+     rvCollection->lockType = lockType;
+     return rvCollection;
+ loser:
+     nssArena_Destroy(arena);
+     return (nssPKIObjectCollection *)NULL;
+ }
+ 
+ NSS_IMPLEMENT void
+ nssPKIObjectCollection_Destroy (
+   nssPKIObjectCollection *collection
+ )
+ {
+     if (collection) {
+-	PRCList *link;
+-	pkiObjectCollectionNode *node;
+-	/* first destroy any objects in the collection */
+-	link = PR_NEXT_LINK(&collection->head);
+-	while (link != &collection->head) {
+-	    node = (pkiObjectCollectionNode *)link;
+-	    if (node->haveObject) {
+-		(*collection->destroyObject)(node->object);
+-	    } else {
+-		nssPKIObject_Destroy(node->object);
+-	    }
+-	    link = PR_NEXT_LINK(link);
+-	}
++  /* destroy all elements of collection*/
++  PL_HashTableDestroy(collection->PKIobjecthashtable);
++  PL_HashTableDestroy(collection->PKIinstancehashtable);
+ 	/* then destroy it */
+ 	nssArena_Destroy(collection->arena);
+     }
+ }
+ 
+ NSS_IMPLEMENT PRUint32
+ nssPKIObjectCollection_Count (
+   nssPKIObjectCollection *collection
+@@ -683,76 +748,29 @@ nssPKIObjectCollection_Count (
+ }
+ 
+ NSS_IMPLEMENT PRStatus
+ nssPKIObjectCollection_AddObject (
+   nssPKIObjectCollection *collection,
+   nssPKIObject *object
+ )
+ {
+-    pkiObjectCollectionNode *node;
+-    node = nss_ZNEW(collection->arena, pkiObjectCollectionNode);
++    pkiObjectCollectionNode *node = nss_ZNEW(collection->arena, pkiObjectCollectionNode);
+     if (!node) {
+ 	return PR_FAILURE;
+     }
+     node->haveObject = PR_TRUE;
+     node->object = nssPKIObject_AddRef(object);
+     (*collection->getUIDFromObject)(object, node->uid);
+-    PR_INIT_CLIST(&node->link);
+-    PR_INSERT_BEFORE(&node->link, &collection->head);
++    PL_HashTableAdd(collection->PKIobjecthashtable, &node->uid, node);
+     collection->size++;
+     return PR_SUCCESS;
+ }
+ 
+ static pkiObjectCollectionNode *
+-find_instance_in_collection (
+-  nssPKIObjectCollection *collection,
+-  nssCryptokiObject *instance
+-)
+-{
+-    PRCList *link;
+-    pkiObjectCollectionNode *node;
+-    link = PR_NEXT_LINK(&collection->head);
+-    while (link != &collection->head) {
+-	node = (pkiObjectCollectionNode *)link;
+-	if (nssPKIObject_HasInstance(node->object, instance)) {
+-	    return node;
+-	}
+-	link = PR_NEXT_LINK(link);
+-    }
+-    return (pkiObjectCollectionNode *)NULL;
+-}
+-
+-static pkiObjectCollectionNode *
+-find_object_in_collection (
+-  nssPKIObjectCollection *collection,
+-  NSSItem *uid
+-)
+-{
+-    PRUint32 i;
+-    PRStatus status;
+-    PRCList *link;
+-    pkiObjectCollectionNode *node;
+-    link = PR_NEXT_LINK(&collection->head);
+-    while (link != &collection->head) {
+-	node = (pkiObjectCollectionNode *)link;
+-	for (i=0; i<MAX_ITEMS_FOR_UID; i++) {
+-	    if (!nssItem_Equal(&node->uid[i], &uid[i], &status)) {
+-		break;
+-	    }
+-	}
+-	if (i == MAX_ITEMS_FOR_UID) {
+-	    return node;
+-	}
+-	link = PR_NEXT_LINK(link);
+-    }
+-    return (pkiObjectCollectionNode *)NULL;
+-}
+-
+-static pkiObjectCollectionNode *
+ add_object_instance (
+   nssPKIObjectCollection *collection,
+   nssCryptokiObject *instance,
+   PRBool *foundIt
+ )
+ {
+     PRUint32 i;
+     PRStatus status;
+@@ -761,17 +779,17 @@ add_object_instance (
+     NSSItem uid[MAX_ITEMS_FOR_UID];
+     nsslibc_memset(uid, 0, sizeof uid);
+     /* The list is traversed twice, first (here) looking to match the
+      * { token, handle } tuple, and if that is not found, below a search
+      * for unique identifier is done.  Here, a match means this exact object
+      * instance is already in the collection, and we have nothing to do.
+      */
+     *foundIt = PR_FALSE;
+-    node = find_instance_in_collection(collection, instance);
++    node = PL_HashTableLookup(collection->PKIinstancehashtable, instance);
+     if (node) {
+ 	/* The collection is assumed to take over the instance.  Since we
+ 	 * are not using it, it must be destroyed.
+ 	 */
+ 	nssCryptokiObject_Destroy(instance);
+ 	*foundIt = PR_TRUE;
+ 	return node;
+     }
+@@ -783,17 +801,17 @@ add_object_instance (
+                                                collection->arena);
+     if (status != PR_SUCCESS) {
+ 	goto loser;
+     }
+     /* Search for unique identifier.  A match here means the object exists 
+      * in the collection, but does not have this instance, so the instance 
+      * needs to be added.
+      */
+-    node = find_object_in_collection(collection, uid);
++    node = PL_HashTableLookup(collection->PKIobjecthashtable, uid);
+     if (node) {
+ 	/* This is an object with multiple instances */
+ 	status = nssPKIObject_AddInstance(node->object, instance);
+     } else {
+ 	/* This is a completely new object.  Create a node for it. */
+ 	node = nss_ZNEW(collection->arena, pkiObjectCollectionNode);
+ 	if (!node) {
+ 	    goto loser;
+@@ -803,22 +821,22 @@ add_object_instance (
+                                            collection->lockType);
+ 	if (!node->object) {
+ 	    goto loser;
+ 	}
+ 	for (i=0; i<MAX_ITEMS_FOR_UID; i++) {
+ 	    node->uid[i] = uid[i];
+ 	}
+ 	node->haveObject = PR_FALSE;
+-	PR_INIT_CLIST(&node->link);
+-	PR_INSERT_BEFORE(&node->link, &collection->head);
+-	collection->size++;
++  PL_HashTableAdd(collection->PKIobjecthashtable, &node->uid, node);
++  collection->size++;
+ 	status = PR_SUCCESS;
+     }
+-    nssArena_Unmark(collection->arena, mark);
++  PL_HashTableAdd(collection->PKIinstancehashtable, instance, node);
++  nssArena_Unmark(collection->arena, mark);
+     return node;
+ loser:
+     if (mark) {
+ 	nssArena_Release(collection->arena, mark);
+     }
+     nssCryptokiObject_Destroy(instance);
+     return (pkiObjectCollectionNode *)NULL;
+ }
+@@ -854,94 +872,114 @@ nssPKIObjectCollection_AddInstances (
+ }
+ 
+ static void
+ nssPKIObjectCollection_RemoveNode (
+    nssPKIObjectCollection *collection,
+    pkiObjectCollectionNode *node
+ )
+ {
+-    PR_REMOVE_LINK(&node->link); 
++    PL_HashTableRemove(collection->PKIobjecthashtable, &node->uid);    
+     collection->size--;
+ }
+ 
++PRIntn get_objects_callback(PLHashEntry *he, PRIntn index,void *_args)
++{
++  struct get_obj_args *args = _args;
++  pkiObjectCollectionNode *node = he->value;
++  if (!node->haveObject) {
++      //Convert the proto-object to an object
++      node->object = args->collection->createObject(node->object);
++      if (!node->object) {
++          args->error = 1;
++          return HT_ENUMERATE_REMOVE;
++      }
++      node->haveObject = PR_TRUE;
++  }
++  args->rvObjects[args->nr_objs++] = nssPKIObject_AddRef(node->object);
++  if (args->nr_objs < args->rvSize)
++      return HT_ENUMERATE_NEXT;
++  else
++      return HT_ENUMERATE_STOP;
++}
++
+ static PRStatus
+ nssPKIObjectCollection_GetObjects (
+   nssPKIObjectCollection *collection,
+   nssPKIObject **rvObjects,
+   PRUint32 rvSize
+ )
+ {
+-    PRUint32 i = 0;
+-    PRCList *link = PR_NEXT_LINK(&collection->head);
+-    pkiObjectCollectionNode *node;
+-    int error=0;
+-    while ((i < rvSize) && (link != &collection->head)) {
+-	node = (pkiObjectCollectionNode *)link;
+-	if (!node->haveObject) {
+-	    /* Convert the proto-object to an object */
+-	    node->object = (*collection->createObject)(node->object);
+-	    if (!node->object) {
+-		link = PR_NEXT_LINK(link);
+-		/*remove bogus object from list*/
+-		nssPKIObjectCollection_RemoveNode(collection,node);
+-		error++;
+-		continue;
+-	    }
+-	    node->haveObject = PR_TRUE;
+-	}
+-	rvObjects[i++] = nssPKIObject_AddRef(node->object);
+-	link = PR_NEXT_LINK(link);
+-    }
+-    if (!error && *rvObjects == NULL) {
++    struct get_obj_args args;
++    int numentries;
++    args.collection = collection;
++    args.rvObjects = rvObjects;
++    args.rvSize = rvSize;
++    args.error = args.nr_objs = 0;
++    numentries = PL_HashTableEnumerateEntries(collection->PKIobjecthashtable, 
++                                              get_objects_callback, 
++                                              &args);
++    if (numentries == 0)
++      return PR_SUCCESS;
++  
++    if (!args.error && *rvObjects == NULL) {
+ 	nss_SetError(NSS_ERROR_NOT_FOUND);
+     }
+     return PR_SUCCESS;
+ }
+ 
++PRIntn collection_traverse_callback(PLHashEntry *he,PRIntn index,void *arg)
++{
++  const collection_Traverse_arg *ctraverse = arg;
++  pkiObjectCollectionNode *node = he->value;
++  nssPKIObjectCollection *collection = ctraverse->collection;
++  nssPKIObjectCallback *callback = ctraverse->callback;
++  if (!node->haveObject) {
++      node->object = (*collection->createObject)(node->object);
++if (!node->object) {
++    //remove bogus object from list
++    return HT_ENUMERATE_REMOVE;
++}
++      node->haveObject = PR_TRUE;
++  }
++  switch (collection->objectType) {
++  case pkiObjectType_Certificate: 
++      (void)(*callback->func.cert)((NSSCertificate *)node->object, 
++                                      callback->arg);
++      break;
++  case pkiObjectType_CRL: 
++      (void)(*callback->func.crl)((NSSCRL *)node->object, 
++                                     callback->arg);
++      break;
++  case pkiObjectType_PrivateKey: 
++      (void)(*callback->func.pvkey)((NSSPrivateKey *)node->object, 
++                                       callback->arg);
++      break;
++  case pkiObjectType_PublicKey: 
++      (void)(*callback->func.pbkey)((NSSPublicKey *)node->object, 
++                                       callback->arg);
++      break;
++  }
++  return HT_ENUMERATE_NEXT;
++}
++
+ NSS_IMPLEMENT PRStatus
+ nssPKIObjectCollection_Traverse (
+   nssPKIObjectCollection *collection,
+   nssPKIObjectCallback *callback
+ )
+ {
+-    PRCList *link = PR_NEXT_LINK(&collection->head);
+-    pkiObjectCollectionNode *node;
+-    while (link != &collection->head) {
+-	node = (pkiObjectCollectionNode *)link;
+-	if (!node->haveObject) {
+-	    node->object = (*collection->createObject)(node->object);
+-	    if (!node->object) {
+-		link = PR_NEXT_LINK(link);
+-		/*remove bogus object from list*/
+-		nssPKIObjectCollection_RemoveNode(collection,node);
+-		continue;
+-	    }
+-	    node->haveObject = PR_TRUE;
+-	}
+-	switch (collection->objectType) {
+-	case pkiObjectType_Certificate: 
+-	    (void)(*callback->func.cert)((NSSCertificate *)node->object, 
+-	                                    callback->arg);
+-	    break;
+-	case pkiObjectType_CRL: 
+-	    (void)(*callback->func.crl)((NSSCRL *)node->object, 
+-	                                   callback->arg);
+-	    break;
+-	case pkiObjectType_PrivateKey: 
+-	    (void)(*callback->func.pvkey)((NSSPrivateKey *)node->object, 
+-	                                     callback->arg);
+-	    break;
+-	case pkiObjectType_PublicKey: 
+-	    (void)(*callback->func.pbkey)((NSSPublicKey *)node->object, 
+-	                                     callback->arg);
+-	    break;
+-	}
+-	link = PR_NEXT_LINK(link);
+-    }
++    collection_Traverse_arg ctraverse;
++    ctraverse.collection = collection;
++    ctraverse.callback = callback;
++    int numentries = PL_HashTableEnumerateEntries(collection->PKIobjecthashtable,  
++                                                  collection_traverse_callback, 
++                                                  &ctraverse);
++    if (numentries == 0)
++      return PR_SUCCESS;
+     return PR_SUCCESS;
+ }
+ 
+ NSS_IMPLEMENT PRStatus
+ nssPKIObjectCollection_AddInstanceAsObject (
+   nssPKIObjectCollection *collection,
+   nssCryptokiObject *instance
+ )
